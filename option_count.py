@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
 	source = file2string('dummy.cl')
 
-	print 'Build Options      Build Result'
+	print '# Build Options      Build Result'
 	print '-------------------------------'
 
 	for n in xrange(args.min, args.max):
@@ -61,9 +61,9 @@ if __name__ == '__main__':
 			prg.build(build_options)
 		except cl.RuntimeError as err:
 			if err.code == -43:
-				result = 'Invalid build args'
+				result = 'invalid build args'
 			else:
 				result = 'OpenCL error: {0}'.format(err.code)
 
-		print '{0:>13}      {1}'.format(n, result)
+		print '{0:>15}      {1}'.format(n, result)
 
