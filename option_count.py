@@ -51,7 +51,7 @@ if __name__ == '__main__':
 	source = file2string('dummy.cl')
 
 	print '# Build Options      Build Result'
-	print '-------------------------------'
+	print '---------------------------------'
 
 	for n in xrange(args.min, args.max):
 		result = 'success'
