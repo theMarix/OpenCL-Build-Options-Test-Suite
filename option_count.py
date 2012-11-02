@@ -53,7 +53,7 @@ if __name__ == '__main__':
 	print '# Build Options      Build Result'
 	print '---------------------------------'
 
-	for n in xrange(args.min, args.max):
+	for n in xrange(args.min, args.max + 1):
 		result = 'success'
 		build_options = [args.template.format(i) for i in range(1, n + 1)]
 		prg = cl.Program(ctx, source)
