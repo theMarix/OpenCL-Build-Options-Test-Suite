@@ -31,7 +31,7 @@ if __name__ == '__main__':
 	parser.add_option('-d', '--device', type=int, metavar='I', help='The device for which to compile the kernels')
 	parser.add_option('-m', '--min', type=int, metavar='N', default=0, help='The minimum number of options to test')
 	parser.add_option('-n', '--max', type=int, metavar='N', default=42, help='The maximum number of options to test')
-	parser.add_option('-t', '--template', default='-DFOO{0}', help='The template for the option name. Will be python-formatted with an integer')
+	parser.add_option('-t', '--template', default='-D FOO{0}', help='The template for the option name. Will be python-formatted with an integer')
 
 	(args, files) = parser.parse_args()
 

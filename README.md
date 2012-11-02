@@ -3,7 +3,10 @@ OpenCL Build Options Test Suite
 
 This is a collection of test cases to check how different OpenCL implementations handle build options passed to the OpenCL compiler.
 
-Currently the only implemented test is a check for the number of build options that can be processed. This is implemented in the script `option_count.py`. Invoking the script with `--help` will give further details. One OpenCL implementation that shows a weak spot in that area is that of OS X Lion, which can only handle even numbers of build options:
+Currently the only implemented test is a check for the number of build options that can be processed.
+This is implemented in the script `option_count.py`. Invoking the script with `--help` will give further details.
+One OpenCL implementation that shows a weak spot in that area is that of OS X Lion, which can only handle even numbers of build options if the options are given in the format `-Dname`.
+One should however be aware, however, that the [OpenCL Specification](http://www.khronos.org/registry/cl/) only specifies the format `-D name`.
 
 	# Build Options      Build Result
 	---------------------------------
